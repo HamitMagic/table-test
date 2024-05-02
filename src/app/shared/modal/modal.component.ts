@@ -39,7 +39,6 @@ export class ModalComponent implements AfterViewInit {
   }
 
   onClose() {
-    console.log('close')
     this.modalService.close();
   }
 
@@ -93,45 +92,7 @@ export class ModalComponent implements AfterViewInit {
   }
 
   close() {
-    this.modal.nativeElement.style.animation = this.modalLeaveAnimation;
-    this.overlay.nativeElement.style.animation = this.overlayLeaveAnimation;
-
-    // Goal here is to clean up the DOM to not have 'dead elements'
-    // No animations on both elements
-    if (
-      !this.options?.animations?.modal?.leave &&
-      !this.options?.animations?.overlay?.leave
-    ) {
-      this.modalService.options = undefined;
-      this.element.nativeElement.remove();
-      return;
-    }
-
-    // Remove element if not animated
-    this.removeElementIfNoAnimation(
-      this.modal.nativeElement,
-      this.modalLeaveAnimation
-    );
-    this.removeElementIfNoAnimation(
-      this.overlay.nativeElement,
-      this.overlayLeaveAnimation
-    );
-
-    // Both elements are animated, remove modal as soon as longest one ends
-    if (this.modalLeaveTiming > this.overlayLeaveTiming) {
-      this.modalAnimationEnd.subscribe(() => {
-        this.element.nativeElement.remove();
-      });
-    } else if (this.modalLeaveTiming < this.overlayLeaveTiming) {
-      this.overlayAnimationEnd.subscribe(() => {
-        this.element.nativeElement.remove();
-      });
-    } else {
-      zip(this.modalAnimationEnd, this.overlayAnimationEnd).subscribe(() => {
-        this.element.nativeElement.remove();
-      });
-    }
-
+    this.element.nativeElement.remove();
     this.modalService.options = undefined;
   }
 

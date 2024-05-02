@@ -25,26 +25,15 @@ export class AppComponent {
   public headerStringList = headerStringList;
   public isChecked = false;
   private parent: string = '';
-  @ViewChild('search', { static: true, read: ViewContainerRef })
-  vcr!: ViewContainerRef;
+  @ViewChild('search', { static: true, read: ViewContainerRef }) search!: ViewContainerRef;
 
   constructor(private modalService: ModalService) {}
 
   openDialog(view: TemplateRef<Element>, parent: string) {
     this.parent = parent;
-    this.modalService.open(this.vcr, view, {
-      animations: {
-        modal: {
-          enter: 'enter-scaling 0.3s ease-out',
-          leave: 'fade-out 0.1s forwards',
-        },
-        overlay: {
-          enter: 'fade-in 1s',
-          leave: 'fade-out 0.3s forwards',
-        },
-      },
+    this.modalService.open(this.search, view, {
       size: {
-        width: '40rem',
+        width: '16rem',
       },
     });
   }
@@ -58,7 +47,6 @@ export class AppComponent {
   }
 
   filter(event: string) {
-    console.log(this.parent)
     this.data = data.filter((el) => 
       el[this.parent]?.toString().includes(event));
   }

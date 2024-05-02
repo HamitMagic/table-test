@@ -1,7 +1,8 @@
 <div class="modal-wrapper">
   <section class="modal" #modal>
     <ng-content></ng-content>
+    <button (click)="onClose()" id="ok">OK</button>
+    <button (click)="onClose()" id="canсel">Сбросить</button>
   </section>
-
   <div class="modal-overlay" #overlay (click)="onClose()"></div>
 </div>

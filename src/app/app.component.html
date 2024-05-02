@@ -39,8 +39,8 @@
 <ng-template #search>
   <div class="modal-container">
     <div class="content">
-      <input type="text" [(ngModel)]="inputText" (ngModelChange)="filter($event)">
-      <button (click)="clear()">X</button>
+      <input class="input" type="text" [(ngModel)]="inputText" (ngModelChange)="filter($event)">
+      <button class="clear" (click)="clear()">X</button>
     </div>
   </div>
 </ng-template>

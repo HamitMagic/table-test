@@ -13,7 +13,17 @@
 	color: #212B36;
 	font-size: 20px;
 }
-
+.clear {
+	background: none;
+	border: 0;
+	position: absolute;
+	right: 6px;
+	cursor: pointer;
+	top: 10px;
+}
+.input {
+	width: 97%;
+}
 .table {
 	/* overflow-x: none; */
 	/* overflow-y: scroll; */
@@ -50,5 +60,7 @@
 	color: #00A0E3;
 }
 
-
+.content {
+	padding: 8px;
+}
 
