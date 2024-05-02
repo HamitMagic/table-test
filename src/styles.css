@@ -6,12 +6,12 @@ body {
 	box-sizing: border-box;
 }
 ::-webkit-scrollbar{
-	width: 8px;
-	height: 8px;
+	width: 6px;
+	height: 4px;
 }
 ::-webkit-scrollbar-thumb {
-    background-color: rgb(135, 135, 135);
-    border-radius: 9em;
+    background-color: #637381;
+    border-radius: 12px;
     /* box-shadow: inset 1px 1px 10px #f3faf7; */
 }
 
