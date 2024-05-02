@@ -1,1 +1,31 @@
-/* You can add global styles to this file, and also import other style files */
+body {
+	width: 100%;
+	font-family: "Open Sans";
+	font-size: 12px;
+	color: #2D2F30;
+	box-sizing: border-box;
+}
+
+.name {
+	text-overflow: ellipsis;
+	overflow: hidden;
+	white-space: nowrap;
+	width: 568px;
+}
+.brand, .article, .name, .price, .atStock, .notAtStock, .isExist {
+	padding: 16px 10px 16px 16px;
+}
+.brand {
+	min-width: 212px;
+	position: sticky;
+	left: 0;
+}
+.article {
+	min-width: 200px;
+}
+.name {
+	min-width: 568px;
+}
+.price, .atStock, .notAtStock {
+	min-width: 270px;
+} 

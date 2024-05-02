@@ -1,0 +1,53 @@
+.table > :nth-child(odd) {
+	background-color: rgb(250, 250, 250);
+}
+
+#table-header{
+	background-color: #F3F3F3;
+	position: sticky;
+	top: 0;
+	z-index: 3;
+}
+
+.title {
+	color: #212B36;
+	font-size: 20px;
+}
+
+.table {
+	/* overflow-x: none; */
+	/* overflow-y: scroll; */
+	width: fit-content;
+}
+.table-item {
+	position: relative;
+}
+.icon {
+	position: absolute;
+	right: 0;
+	border: 0;
+	cursor: pointer;
+}
+.isExists {
+	flex: auto;
+}
+.table-row {
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	/* justify-content: space-between; */
+}
+.brand {
+	position: sticky;
+	z-index: 2;
+	opacity: 1;
+}
+.table-header .brand {
+	/* z-index: 10; */
+}
+.atStock {
+	color: #00A0E3;
+}
+
+
+
