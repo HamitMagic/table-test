@@ -47,7 +47,10 @@
 <ng-template #toggle>
   <div class="modal-container">
     <div class="content">
-      <input type="checkbox" [checked]="isChecked" (click)="setChecked()">
+      <label class="switch">
+        <input type="checkbox" (click)="setChecked()" [checked]="isChecked" ><span  class="slider round"></span>
+      </label>
+      <span class="text">В наличии</span>
     </div>
   </div>
 </ng-template>
