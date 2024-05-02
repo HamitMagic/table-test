@@ -1,7 +1,6 @@
-.table > :nth-child(2n) {
+.table>:nth-child(2n) {
 	background-color: #f3f3f3;
 }
-
 #table-header{
 	background-color: #e0e0e0;
 	position: sticky;
@@ -25,8 +24,6 @@
 	width: 97%;
 }
 .table {
-	/* overflow-x: none; */
-	/* overflow-y: scroll; */
 	width: fit-content;
 }
 .table-item {
@@ -46,21 +43,21 @@
 	display: flex;
 	flex-direction: row;
 	width: 100%;
-	/* justify-content: space-between; */
 }
 .brand {
 	position: sticky;
 	z-index: 2;
 	opacity: 1;
-}
-.table-header .brand {
-	/* z-index: 10; */
+	box-shadow: 5px 5px 20px 2px gray;
 }
 .atStock {
 	color: #00A0E3;
 }
-
+#brand {
+	background-color: #e0e0e0;
+}
 .content {
 	padding: 8px;
 }
+
 

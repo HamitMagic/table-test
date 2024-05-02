@@ -3,7 +3,7 @@
   <div class="table">
       <div class="table-row" id="table-header">
         @for (el of headerStringList; track el) {
-          <div [ngClass]="el.class + ' ' + 'table-item'">
+          <div [ngClass]="el.class + ' ' + 'table-item'" [id]="el.class">
             {{el.name}}
             @if (el.class === 'isExists') {
                 <button class="icon" (click)="openDialog(toggle, el.class)">
@@ -21,9 +21,9 @@
           </div>
         }
       </div>
-      @for (item of data; track $index) {
+      @for (item of data; track item) {
         <div class="table-row">
-          <span class="brand table-item">{{item.brand}}</span>
+          <span class="brand table-item" id="brand-item" [style]="$index%2 ? 'background:white':'background:#f3f3f3'">{{item.brand}}</span>
           <span class="article table-item">{{item.article}}</span>
           <span class="name table-item">{{item.name}}</span>
           <span class="price table-item">{{item.price}}</span>

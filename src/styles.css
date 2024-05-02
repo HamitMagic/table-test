@@ -5,6 +5,15 @@ body {
 	color: #2D2F30;
 	box-sizing: border-box;
 }
+::-webkit-scrollbar{
+	width: 8px;
+	height: 8px;
+}
+::-webkit-scrollbar-thumb {
+    background-color: rgb(135, 135, 135);
+    border-radius: 9em;
+    /* box-shadow: inset 1px 1px 10px #f3faf7; */
+}
 
 .name {
 	text-overflow: ellipsis;
