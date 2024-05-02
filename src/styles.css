@@ -12,7 +12,7 @@ body {
 	white-space: nowrap;
 	width: 568px;
 }
-.brand, .article, .name, .price, .atStock, .notAtStock, .isExist {
+.brand, .article, .name, .price, .atStock, .notAtStock, .isExists {
 	padding: 16px 10px 16px 16px;
 }
 .brand {
